@@ -1,0 +1,31 @@
+trigger:
+  branches:
+    include:
+    - main
+    - nt-dev
+    - feature/*
+    - release/*
+    exclude:
+    -release/old*
+
+variables:
+  - projectName: sd4780_msa
+  - group: bookstore
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script:
+    echo "$(projectName)"
+
+# resources:
+#   repositories:
+#   - repository: devops
+#     endpoint: Training
+#     type: github
+#     name: nashtech-garage/azure-devops-ci-cd
+#     ref: main
+
+# stages:
+#   - template: templates/dotnet/build.yml@devops
