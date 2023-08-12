@@ -10,7 +10,6 @@ trigger:
 
 variables:
   - projectName: sd4780_msa
-  - group: bookstore
 
 pool:
   vmImage: 'ubuntu-latest'
